@@ -1,0 +1,24 @@
+---
+title: "GitHub Advanced"
+author: "carlyjones1018"
+format: html
+execute:
+  echo: false
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point() +
+  labs(
+    title = "Engine size and highway fuel economy",
+    x = "Engine displacement (liters)",
+    y = "Highway miles per gallon",
+    color = "Vehicle class"
+  )
+```
